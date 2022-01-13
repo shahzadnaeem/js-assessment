@@ -107,7 +107,7 @@ exports.arraysAnswers = {
     let dups = uniqs.flatMap( x => {
       let items = arr.filter( y => y === x );
 
-      console.log( `${x} => ${items}` );
+      // console.log( `${x} => ${items}` );
 
       if ( items.length > 1 ) {
         return [ x ];
