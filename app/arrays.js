@@ -92,7 +92,19 @@ exports.arraysAnswers = {
 
     console.log( `${arr}` );
 
-    let dups = arr.flatMap( x => {
+    let uniqs = [];
+
+    // By hand
+    arr.map( x => {
+      if ( ! uniqs.includes( x ) ) {
+        uniqs.push( x );
+      }
+    });
+
+    // Nice Set based solution
+    uniqs = [... new Set(arr)];
+
+    let dups = uniqs.flatMap( x => {
       let items = arr.filter( y => y === x );
 
       console.log( `${x} => ${items}` );
