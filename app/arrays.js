@@ -125,6 +125,14 @@ exports.arraysAnswers = {
   },
 
   findAllOccurrences: function(arr, target) {
+    let res = [];
 
+    arr.forEach( ( v, i ) => {
+      if ( v === target ) {
+        res.push( i );
+      }
+    });
+
+    return res;
   }
 };
