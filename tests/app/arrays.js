@@ -54,6 +54,8 @@ describe('arrays', function() {
 
     expect(result).to.have.length(3);
     expect(result.join(' ')).to.eql('1 2 3');
+
+    expect(a).to.have.length(4);
   });
 
   it('you should be able to add an item to the beginning of an array', function () {
