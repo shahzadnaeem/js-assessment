@@ -90,7 +90,7 @@ exports.arraysAnswers = {
 
   duplicates: function(arr) {
 
-    console.log( `${arr}` );
+    // console.log( `${arr}` );
 
     let uniqs = [];
 
