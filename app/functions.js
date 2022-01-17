@@ -73,5 +73,22 @@ exports.functionsAnswers = {
 
   curryIt: function(fn) {
 
+    let args = [];
+
+    function curry() {
+      return function( arg ) {
+        args.push( arg );
+
+        if ( args.length === fn.length ) {
+          // We can finally call the function
+          return fn.apply( null, args )
+        }
+        else {
+          return curry();
+        }
+      }
+    }
+
+    return curry();
   }
 };
