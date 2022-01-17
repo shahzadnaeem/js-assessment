@@ -36,6 +36,23 @@ exports.stringsAnswers = {
 
   wordWrap: function(str, cols) {
 
+    let words = str.split(' ');
+    let res = '';
+
+    let currLine = '';
+
+    words.forEach(word => {
+      if ( currLine.length + word.length > cols ) {
+        res += ( '\n' + currLine );
+        currLine = word;
+      } else {
+        currLine += ( ' ' + word );
+      }
+    });
+
+    res += ( '\n' + currLine );
+
+    return res.trimStart();
   },
 
   reverseString: function(str) {

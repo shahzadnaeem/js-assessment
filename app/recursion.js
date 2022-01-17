@@ -63,7 +63,7 @@ exports.recursionAnswers = {
     return this.fibonacci(n - 1) + this.fibonacci(n - 2);
   },
 
-  validParentheses: function (n) {
+  validParenthesesBad: function (n) {
 
     let res = [];
 
@@ -84,7 +84,32 @@ exports.recursionAnswers = {
       doBrackets(n, "", "", res);
     }
 
-    console.log(res);
+    // console.log(res);
+
+    return res;
+  },
+
+  validParentheses: function( n ) {
+    let res = [];
+
+    function genParens( left, right, str ) {
+
+      if ( left === 0 && right === 0 ) {
+        res.push( str );
+      }
+
+      if ( left > 0 ) {
+        genParens( left-1, right+1, str+"(" );
+      }
+
+      if ( right > 0 ) {
+        genParens( left, right-1, str+")" );
+      }
+    }
+
+    genParens( n, 0, "" );
+
+    console.log( res );
 
     return res;
   }
