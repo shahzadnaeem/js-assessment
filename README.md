@@ -2,6 +2,10 @@
 
 # A test-driven JS assessment
 
+## NOTE
+
+**Forked from [js-assessment](https://github.com/rmurphey/js-assessment)**
+
 This repo includes a set of tests that can be used to assess the skills of
 a candidate for a JavaScript position, or to evaluate and improve one's own
 skills.
